@@ -6,12 +6,22 @@ import java.util.UUID;
 
 public class Journey {
 
-    private final JourneyEvent start;
-    private final JourneyEvent end;
+    private JourneyEvent start;
+    private JourneyEvent end;
 
-    public Journey(JourneyEvent start, JourneyEvent end) {
-        this.start = start;
-        this.end = end;
+    public Journey(){
+
+    }
+    public Journey(JourneyEvent startEvent, JourneyEvent endEvent) {
+        start = startEvent;
+        end = endEvent;
+    }
+
+    public void createStartEvent(UUID cardId, UUID readerId){
+        start = new JourneyStart(cardId, readerId);
+    }
+    public void createEndEvent(UUID cardId, UUID readerId){
+        end = new JourneyEnd(cardId, readerId);
     }
 
     public UUID originId() {

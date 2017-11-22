@@ -10,50 +10,26 @@ import java.util.*;
 
 public class TravelTracker implements ScanListener {
 
-    private final List<JourneyEvent> eventLog = new ArrayList<JourneyEvent>();
-    private final Set<UUID> currentlyTravelling = new HashSet<UUID>();
-    private List<Journey> journeys = new ArrayList<Journey>();
-    private ArrayList<Date[]> journeyTimes = new ArrayList<Date[]>();
-    private ArrayList<Integer> duration = new ArrayList<Integer>();
+    private final Hashtable<UUID, CustomerTracker> customerTrackerHashTable= new Hashtable<>();
+    private PaymentsSystem paymentsSystem = PaymentsSystem.getInstance();
+    private PaymentCalculator calculator = PaymentCalculator.getInstance();
 
-    private void setJourneyTimes(){
-        for(Journey journey: journeys){
-            journeyTimes.add(new Date[] {journey.startTime(), journey.endTime()});
-            duration.add(journey.durationSeconds());
-        }
-    }
     public void chargeAccounts() {
         CustomerDatabase customerDatabase = CustomerDatabase.getInstance();
         List<Customer> customers = customerDatabase.getCustomers();
-        PaymentCalculator calculator = PaymentCalculator.getInstance();
         for (Customer customer : customers) {
-            totalJourneysFor(customer);
-            if(!journeys.isEmpty()) {
-                setJourneyTimes();
-                calculator.setJourneys(journeyTimes, duration);
-                PaymentsSystem.getInstance().charge(customer, journeys, calculator.calculate());
+            if(customerTrackerHashTable.containsKey(customer.cardId())){
+                CustomerTracker tracker = customerTrackerHashTable.get(customer.cardId());
+                List<Journey> journeys = tracker.getJourneys();
+                if(!journeys.isEmpty()){
+                    paymentsSystem.charge(customer, journeys, calculator.calculate(tracker.getFares(), tracker.checkForPeakJourney()));
+                }
             }
-            journeys.clear();
         }
     }
 
-    private void totalJourneysFor(Customer customer) {
-        List<JourneyEvent> customerJourneyEvents = new ArrayList<JourneyEvent>();
-        for (JourneyEvent journeyEvent : eventLog) {
-            if (journeyEvent.cardId().equals(customer.cardId())) {
-                customerJourneyEvents.add(journeyEvent);
-            }
-        }
-        JourneyEvent start = null;
-        for (JourneyEvent event : customerJourneyEvents) {
-            if (event instanceof JourneyStart) {
-                start = event;
-            }
-            if (event instanceof JourneyEnd && start != null) {
-                journeys.add(new Journey(start, event));
-                start = null;
-            }
-        }
+    public void changePaymentSystem(PaymentsSystem system){
+        this.paymentsSystem = system;
     }
 
     public void connect(OysterCardReader... cardReaders) {
@@ -64,17 +40,15 @@ public class TravelTracker implements ScanListener {
 
     @Override
     public void cardScanned(UUID cardId, UUID readerId) {
-        if (currentlyTravelling.contains(cardId)) {
-            eventLog.add(new JourneyEnd(cardId, readerId));
-            currentlyTravelling.remove(cardId);
-        } else {
-            if (CustomerDatabase.getInstance().isRegisteredId(cardId)) {
-                currentlyTravelling.add(cardId);
-                eventLog.add(new JourneyStart(cardId, readerId));
-            } else {
-                throw new UnknownOysterCardException(cardId);
-            }
+        if (!CustomerDatabase.getInstance().isRegisteredId(cardId)) {
+            throw new UnknownOysterCardException(cardId);
         }
+
+        if(!customerTrackerHashTable.containsKey(cardId)){
+            customerTrackerHashTable.put(cardId, new CustomerTracker(cardId));
+        }
+        CustomerTracker tracker = customerTrackerHashTable.get(cardId);
+        tracker.addEvent(cardId, readerId);
     }
 
 }

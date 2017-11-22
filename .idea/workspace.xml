@@ -36,31 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TicketType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/TicketType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaymentCalculator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PaymentCalculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/PaymentCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Example.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Example.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="194">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -69,24 +49,137 @@
       <file leaf-file-name="TravelTracker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/TravelTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="194">
+              <caret line="24" column="132" lean-forward="false" selection-start-line="24" selection-start-column="132" selection-end-line="24" selection-end-column="132" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerTracker.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/CustomerTracker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="769">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding>
-                <element signature="e#539#547#0" expanded="true" />
-                <element signature="e#606#615#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
+                <element signature="e#2143#2144#0" expanded="true" />
+                <element signature="e#2181#2182#0" expanded="true" />
+                <element signature="e#2222#2223#0" expanded="true" />
+                <element signature="e#2250#2251#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Peak.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Peak.java">
+      <file leaf-file-name="JAVA/com.tfl.billing" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/com.tfl.billing">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>com.tfl.billing</OriginalElement>
+              <nodes>
+                <node x="785.5916666666667" y="194.0">com.tfl.billing.OffPeak</node>
+                <node x="592.3333333333334" y="97.0">com.tfl.billing.JourneyEnd</node>
+                <node x="778.3333333333334" y="97.0">com.tfl.billing.TicketType</node>
+                <node x="0.0" y="194.0">com.tfl.billing.PaymentCalculator</node>
+                <node x="360.0" y="383.0">com.tfl.billing.Example</node>
+                <node x="0.0" y="383.0">com.tfl.billing.UnknownOysterCardException</node>
+                <node x="242.0" y="194.0">com.tfl.billing.CustomerTracker</node>
+                <node x="943.5916666666667" y="194.0">com.tfl.billing.Peak</node>
+                <node x="393.5916666666667" y="0.0">com.tfl.billing.JourneyEvent</node>
+                <node x="142.53333333333336" y="291.0">com.tfl.billing.TravelTracker</node>
+                <node x="399.33333333333337" y="97.0">com.tfl.billing.JourneyStart</node>
+                <node x="243.33333333333337" y="97.0">com.tfl.billing.Journey</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="com.tfl.billing.TravelTracker" target="com.tfl.billing.PaymentCalculator">
+                  <point x="-44.25" y="-23.5" />
+                  <point x="186.78333333333336" y="266.0" />
+                  <point x="111.0" y="266.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.CustomerTracker" target="com.tfl.billing.Journey">
+                  <point x="-69.33333333333326" y="-23.5" />
+                  <point x="-34.0" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.TravelTracker" target="com.tfl.billing.CustomerTracker">
+                  <point x="44.25" y="-23.5" />
+                  <point x="275.28333333333336" y="266.0" />
+                  <point x="346.0" y="266.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.OffPeak" target="com.tfl.billing.TicketType">
+                  <point x="0.0" y="-23.5" />
+                  <point x="854.5916666666667" y="169.0" />
+                  <point x="857.3333333333334" y="169.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.Journey" target="com.tfl.billing.JourneyEvent">
+                  <point x="0.0" y="-23.5" />
+                  <point x="311.33333333333337" y="72.0" />
+                  <point x="423.42500000000007" y="72.0" />
+                  <point x="-59.66666666666663" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.Peak" target="com.tfl.billing.TicketType">
+                  <point x="0.0" y="-23.5" />
+                  <point x="999.5916666666667" y="169.0" />
+                  <point x="910.0" y="169.0" />
+                  <point x="52.66666666666663" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.CustomerTracker" target="com.tfl.billing.TicketType">
+                  <point x="69.33333333333337" y="-23.5" />
+                  <point x="415.33333333333337" y="169.0" />
+                  <point x="804.6666666666667" y="169.0" />
+                  <point x="-52.666666666666686" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.JourneyEnd" target="com.tfl.billing.JourneyEvent">
+                  <point x="0.0" y="-23.5" />
+                  <point x="675.3333333333334" y="72.0" />
+                  <point x="542.7583333333333" y="72.0" />
+                  <point x="59.66666666666663" y="23.5" />
+                </edge>
+                <edge source="com.tfl.billing.JourneyStart" target="com.tfl.billing.JourneyEvent">
+                  <point x="0.0" y="-23.5" />
+                  <point x="485.83333333333337" y="72.0" />
+                  <point x="483.0916666666667" y="72.0" />
+                  <point x="0.0" y="23.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.8189102564102564" x="-244.9275929549902" y="183.0724070450098" />
+              <SelectedNodes>
+                <node>com.tfl.billing.Peak</node>
+              </SelectedNodes>
+              <Categories />
+              <SCOPE>Production</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Example.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Example.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Journey.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Journey.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding>
-                <element signature="e#348#349#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,7 +196,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -400,7 +493,6 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/com/tfl/billing/JourneyEndTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/tfl/billing/JourneyStartTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tfl/billing/TravelTrackerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/JourneyEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/JourneyStart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/JourneyEnd.java" />
@@ -411,6 +503,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/OffPeak.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/Peak.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/Example.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tfl/billing/PeakTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tfl/billing/OffPeakTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tfl/billing/PaymentCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/tfl/billing/TravelTrackerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/Journey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/CustomerTracker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/TravelTracker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tfl/billing/PaymentCalculator.java" />
       </list>
@@ -598,7 +696,7 @@
       <module name="tfl_main" />
       <envs />
     </configuration>
-    <configuration name="JourneyEventTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.tfl.billing.*" />
@@ -609,7 +707,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.tfl.billing" />
-      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.JourneyEventTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.PaymentCalculatorTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -623,7 +721,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="JourneyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentCalculatorTest.singleOffPeakLongJourneyCharge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.tfl.billing.*" />
@@ -634,33 +732,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.tfl.billing" />
-      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.JourneyTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="JourneyTest.areJourneyDetailsCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.tfl.billing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="tfl_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.tfl.billing" />
-      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.JourneyTest" />
-      <option name="METHOD_NAME" value="areJourneyDetailsCorrect" />
+      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.PaymentCalculatorTest" />
+      <option name="METHOD_NAME" value="singleOffPeakLongJourneyCharge" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -673,7 +746,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="JourneyTest.checkTimeCalculations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentCalculatorTest.singleOffPeakShortJourneyCharge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.tfl.billing.*" />
@@ -684,8 +757,33 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.tfl.billing" />
-      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.JourneyTest" />
-      <option name="METHOD_NAME" value="checkTimeCalculations" />
+      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.PaymentCalculatorTest" />
+      <option name="METHOD_NAME" value="singleOffPeakShortJourneyCharge" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="PaymentCalculatorTest.singlePeakLongJourneyCharge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tfl.billing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tfl_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.tfl.billing" />
+      <option name="MAIN_CLASS_NAME" value="com.tfl.billing.PaymentCalculatorTest" />
+      <option name="METHOD_NAME" value="singlePeakLongJourneyCharge" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -779,19 +877,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.JourneyTest.areJourneyDetailsCorrect" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.JourneyTest.checkTimeCalculations" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JourneyTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Example" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JourneyEventTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest.singlePeakLongJourneyCharge" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest.singleOffPeakShortJourneyCharge" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest.singleOffPeakLongJourneyCharge" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Example" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Example" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JourneyTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JourneyEventTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JourneyTest.checkTimeCalculations" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JourneyTest.areJourneyDetailsCorrect" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest.singleOffPeakLongJourneyCharge" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest.singleOffPeakShortJourneyCharge" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PaymentCalculatorTest.singlePeakLongJourneyCharge" />
       </list>
     </recent_temporary>
   </component>
@@ -807,44 +905,44 @@
       <updated>1510944970237</updated>
       <workItem from="1510944972414" duration="17038000" />
       <workItem from="1511172473231" duration="1474000" />
-      <workItem from="1511186160604" duration="30729000" />
+      <workItem from="1511186160604" duration="50756000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JourneyEventTest - 2017.11.21 at 12h 35m 34s.xml">
-      <configuration name="JourneyEventTest" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest - 2017.11.22 at 01h 03m 04s.xml">
+      <configuration name="PaymentCalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest - 2017.11.20 at 20h 26m 59s.xml">
-      <configuration name="JourneyTest" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest - 2017.11.22 at 01h 17m 23s.xml">
+      <configuration name="PaymentCalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest - 2017.11.20 at 20h 29m 13s.xml">
-      <configuration name="JourneyTest" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest - 2017.11.22 at 01h 17m 45s.xml">
+      <configuration name="PaymentCalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest - 2017.11.20 at 23h 39m 53s.xml">
-      <configuration name="JourneyTest" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest - 2017.11.22 at 10h 09m 27s.xml">
+      <configuration name="PaymentCalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest - 2017.11.21 at 12h 48m 44s.xml">
-      <configuration name="JourneyTest" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest - 2017.11.22 at 10h 09m 46s.xml">
+      <configuration name="PaymentCalculatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest - 2017.11.21 at 12h 50m 24s.xml">
-      <configuration name="JourneyTest" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest_singleOffPeakLongJourneyCharge - 2017.11.22 at 01h 09m 22s.xml">
+      <configuration name="PaymentCalculatorTest.singleOffPeakLongJourneyCharge" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest - 2017.11.21 at 22h 14m 38s.xml">
-      <configuration name="JourneyTest" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest_singleOffPeakLongJourneyCharge - 2017.11.22 at 01h 11m 55s.xml">
+      <configuration name="PaymentCalculatorTest.singleOffPeakLongJourneyCharge" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest_areJourneyDetailsCorrect - 2017.11.20 at 20h 18m 15s.xml">
-      <configuration name="JourneyTest.areJourneyDetailsCorrect" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest_singleOffPeakLongJourneyCharge - 2017.11.22 at 01h 12m 44s.xml">
+      <configuration name="PaymentCalculatorTest.singleOffPeakLongJourneyCharge" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest_areJourneyDetailsCorrect - 2017.11.20 at 20h 19m 00s.xml">
-      <configuration name="JourneyTest.areJourneyDetailsCorrect" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest_singleOffPeakShortJourneyCharge - 2017.11.22 at 01h 09m 17s.xml">
+      <configuration name="PaymentCalculatorTest.singleOffPeakShortJourneyCharge" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JourneyTest_checkTimeCalculations - 2017.11.20 at 20h 26m 53s.xml">
-      <configuration name="JourneyTest.checkTimeCalculations" configurationId="JUnit" />
+    <history-entry file="PaymentCalculatorTest_singlePeakLongJourneyCharge - 2017.11.22 at 01h 09m 10s.xml">
+      <configuration name="PaymentCalculatorTest.singlePeakLongJourneyCharge" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49241000" />
+    <option name="totallyTimeSpent" value="69268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -852,7 +950,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -917,7 +1015,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -1008,22 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="26" column="99" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/external.jar!/com/tfl/external/PaymentsSystem.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/tfl/billing/TravelTrackerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1160,72 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/com.tfl.billing">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.tfl.billing</OriginalElement>
-          <nodes>
-            <node x="" y="">com.tfl.billing.OffPeak</node>
-            <node x="" y="">com.tfl.billing.JourneyEnd</node>
-            <node x="" y="">com.tfl.billing.TicketType</node>
-            <node x="" y="">com.tfl.billing.PaymentCalculator</node>
-            <node x="" y="">com.tfl.billing.Example</node>
-            <node x="" y="">com.tfl.billing.UnknownOysterCardException</node>
-            <node x="" y="">com.tfl.billing.Peak</node>
-            <node x="" y="">com.tfl.billing.JourneyEvent</node>
-            <node x="" y="">com.tfl.billing.TravelTracker</node>
-            <node x="" y="">com.tfl.billing.JourneyStart</node>
-            <node x="" y="">com.tfl.billing.Journey</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="592.0" y="350.5" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>Production</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Peak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Example.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Journey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/OffPeak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/TicketType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1234,22 +1252,229 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tfl/billing/OffPeakTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/external.jar!/com/tfl/external/PaymentsSystem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/OffPeak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/external.jar!/com/tfl/external/Customer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tfl/billing/PaymentCalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="103" column="46" lean-forward="false" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1047#1055#0" expanded="true" />
+            <element signature="e#1115#1124#0" expanded="true" />
+            <element signature="e#1592#1600#0" expanded="true" />
+            <element signature="e#1660#1669#0" expanded="true" />
+            <element signature="e#2141#2149#0" expanded="true" />
+            <element signature="e#2209#2218#0" expanded="true" />
+            <element signature="e#2657#2665#0" expanded="true" />
+            <element signature="e#2725#2734#0" expanded="true" />
+            <element signature="e#3157#3165#0" expanded="true" />
+            <element signature="e#3225#3234#0" expanded="true" />
+            <element signature="e#4288#4296#0" expanded="true" />
+            <element signature="e#4356#4365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tfl/billing/TravelTrackerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Example.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Peak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/Journey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/TravelTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="194">
+          <caret line="24" column="132" lean-forward="false" selection-start-line="24" selection-start-column="132" selection-end-line="24" selection-end-column="132" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.tfl.billing">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.tfl.billing</OriginalElement>
+          <nodes>
+            <node x="785.5916666666667" y="194.0">com.tfl.billing.OffPeak</node>
+            <node x="592.3333333333334" y="97.0">com.tfl.billing.JourneyEnd</node>
+            <node x="778.3333333333334" y="97.0">com.tfl.billing.TicketType</node>
+            <node x="0.0" y="194.0">com.tfl.billing.PaymentCalculator</node>
+            <node x="360.0" y="383.0">com.tfl.billing.Example</node>
+            <node x="0.0" y="383.0">com.tfl.billing.UnknownOysterCardException</node>
+            <node x="242.0" y="194.0">com.tfl.billing.CustomerTracker</node>
+            <node x="943.5916666666667" y="194.0">com.tfl.billing.Peak</node>
+            <node x="393.5916666666667" y="0.0">com.tfl.billing.JourneyEvent</node>
+            <node x="142.53333333333336" y="291.0">com.tfl.billing.TravelTracker</node>
+            <node x="399.33333333333337" y="97.0">com.tfl.billing.JourneyStart</node>
+            <node x="243.33333333333337" y="97.0">com.tfl.billing.Journey</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.tfl.billing.TravelTracker" target="com.tfl.billing.PaymentCalculator">
+              <point x="-44.25" y="-23.5" />
+              <point x="186.78333333333336" y="266.0" />
+              <point x="111.0" y="266.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.CustomerTracker" target="com.tfl.billing.Journey">
+              <point x="-69.33333333333326" y="-23.5" />
+              <point x="-34.0" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.TravelTracker" target="com.tfl.billing.CustomerTracker">
+              <point x="44.25" y="-23.5" />
+              <point x="275.28333333333336" y="266.0" />
+              <point x="346.0" y="266.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.OffPeak" target="com.tfl.billing.TicketType">
+              <point x="0.0" y="-23.5" />
+              <point x="854.5916666666667" y="169.0" />
+              <point x="857.3333333333334" y="169.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.Journey" target="com.tfl.billing.JourneyEvent">
+              <point x="0.0" y="-23.5" />
+              <point x="311.33333333333337" y="72.0" />
+              <point x="423.42500000000007" y="72.0" />
+              <point x="-59.66666666666663" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.Peak" target="com.tfl.billing.TicketType">
+              <point x="0.0" y="-23.5" />
+              <point x="999.5916666666667" y="169.0" />
+              <point x="910.0" y="169.0" />
+              <point x="52.66666666666663" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.CustomerTracker" target="com.tfl.billing.TicketType">
+              <point x="69.33333333333337" y="-23.5" />
+              <point x="415.33333333333337" y="169.0" />
+              <point x="804.6666666666667" y="169.0" />
+              <point x="-52.666666666666686" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.JourneyEnd" target="com.tfl.billing.JourneyEvent">
+              <point x="0.0" y="-23.5" />
+              <point x="675.3333333333334" y="72.0" />
+              <point x="542.7583333333333" y="72.0" />
+              <point x="59.66666666666663" y="23.5" />
+            </edge>
+            <edge source="com.tfl.billing.JourneyStart" target="com.tfl.billing.JourneyEvent">
+              <point x="0.0" y="-23.5" />
+              <point x="485.83333333333337" y="72.0" />
+              <point x="483.0916666666667" y="72.0" />
+              <point x="0.0" y="23.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8189102564102564" x="-244.9275929549902" y="183.0724070450098" />
+          <SelectedNodes>
+            <node>com.tfl.billing.Peak</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>Production</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/tfl/billing/PeakTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding>
-            <element signature="e#539#547#0" expanded="true" />
-            <element signature="e#606#615#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/PaymentCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="194">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfl/billing/CustomerTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#2143#2144#0" expanded="true" />
+            <element signature="e#2181#2182#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
