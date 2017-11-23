@@ -14,8 +14,7 @@ public class CustomerTracker{
     private List<TicketType> tickets = new ArrayList<>();
     private List<BigDecimal> fares = new ArrayList<>();
     private boolean currentlyTravelling = false;
-    public CustomerTracker(UUID cardId){
-        this.cardId = cardId;
+    public CustomerTracker(){
     }
     private boolean peak(Journey journey) {
         return peak(journey.startTime()) || peak(journey.endTime());
@@ -44,6 +43,20 @@ public class CustomerTracker{
             currentlyTravelling = true;
         }else{
             currentJourney.createEndEvent(cardId, readerId);
+            customerJourney.add(currentJourney);
+            findTicketType(currentJourney);
+            currentJourney = null;
+            currentlyTravelling = false;
+        }
+    }
+    public void addEvent(UUID cardId, UUID readerId, long time){
+        if(!currentlyTravelling){
+            //Create a new event since start of new journey
+            currentJourney = new Journey();
+            currentJourney.createStartEvent(cardId, readerId, time);
+            currentlyTravelling = true;
+        }else{
+            currentJourney.createEndEvent(cardId, readerId, time);
             customerJourney.add(currentJourney);
             findTicketType(currentJourney);
             currentJourney = null;

@@ -11,25 +11,22 @@ import java.util.*;
 public class TravelTracker implements ScanListener {
 
     private final Hashtable<UUID, CustomerTracker> customerTrackerHashTable= new Hashtable<>();
-    private PaymentsSystem paymentsSystem = PaymentsSystem.getInstance();
+    private CustomerDatabase databases = CustomerDatabase.getInstance();
+    private PaymentsSystem payments = PaymentsSystem.getInstance();
     private PaymentCalculator calculator = PaymentCalculator.getInstance();
 
     public void chargeAccounts() {
-        CustomerDatabase customerDatabase = CustomerDatabase.getInstance();
-        List<Customer> customers = customerDatabase.getCustomers();
+        List<Customer> customers = databases.getCustomers();
         for (Customer customer : customers) {
             if(customerTrackerHashTable.containsKey(customer.cardId())){
                 CustomerTracker tracker = customerTrackerHashTable.get(customer.cardId());
                 List<Journey> journeys = tracker.getJourneys();
                 if(!journeys.isEmpty()){
-                    paymentsSystem.charge(customer, journeys, calculator.calculate(tracker.getFares(), tracker.checkForPeakJourney()));
+                    calculator.didCustomerRideDuringPeakHours(tracker.checkForPeakJourney());
+                    payments.charge(customer, journeys, calculator.calculate(tracker.getFares()));
                 }
             }
         }
-    }
-
-    public void changePaymentSystem(PaymentsSystem system){
-        this.paymentsSystem = system;
     }
 
     public void connect(OysterCardReader... cardReaders) {
@@ -40,15 +37,25 @@ public class TravelTracker implements ScanListener {
 
     @Override
     public void cardScanned(UUID cardId, UUID readerId) {
-        if (!CustomerDatabase.getInstance().isRegisteredId(cardId)) {
+        boolean checkCard = databases.isRegisteredId(cardId);
+        if (!checkCard) {
             throw new UnknownOysterCardException(cardId);
         }
-
         if(!customerTrackerHashTable.containsKey(cardId)){
-            customerTrackerHashTable.put(cardId, new CustomerTracker(cardId));
+            customerTrackerHashTable.put(cardId, new CustomerTracker());
         }
         CustomerTracker tracker = customerTrackerHashTable.get(cardId);
         tracker.addEvent(cardId, readerId);
     }
 
+    public CustomerTracker getCustomerTracker(UUID cardId){
+        return customerTrackerHashTable.get(cardId);
+    }
+
+    public void setCustomerDatabase(CustomerDatabase db){
+        this.databases = db;
+    }
+    public void setPaymentSystem(PaymentsSystem ps){
+        this.payments = ps;
+    }
 }

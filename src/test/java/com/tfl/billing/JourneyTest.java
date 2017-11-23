@@ -20,24 +20,43 @@ public class JourneyTest {
     private UUID startStationReaderId = UUID.randomUUID();
     private UUID endStationReaderId = UUID.randomUUID();
     private long entryTime = System.currentTimeMillis();
-    private JourneyEvent start = new JourneyStart(cardId, startStationReaderId, entryTime);
     private long exitTime = entryTime + (30*60*1000);
-    private JourneyEvent end = new JourneyEnd(cardId, endStationReaderId, exitTime);
-    private Journey journey = new Journey(start, end);
-    private Date entryTimeDate = new Date(entryTime);
-    private Date exitTimeDate = new Date(exitTime);
+    Date entryTimeDate = new Date(entryTime);
+    Date exitTimeDate = new Date(exitTime);
 
     @Test
     public void areJourneyDetailsCorrect(){
+        JourneyEvent start = new JourneyStart(cardId, startStationReaderId, entryTime);
+        JourneyEvent end = new JourneyEnd(cardId, endStationReaderId, exitTime);
+        Journey journey = new Journey(start, end);
         assertThat(journey.originId(), is(startStationReaderId));
         assertThat(journey.destinationId(), is(endStationReaderId));
         assertThat(journey.startTime(), is(entryTimeDate));
         assertThat(journey.endTime(), is(exitTimeDate));
     }
     @Test
+    public void emptyJourneyGivesCorrectDetails(){
+        Journey journey = new Journey();
+        journey.createStartEvent(cardId, startStationReaderId, entryTime);
+        journey.createEndEvent(cardId, endStationReaderId, exitTime);
+        assertThat(journey.originId(), is(startStationReaderId));
+        assertThat(journey.destinationId(), is(endStationReaderId));
+        assertThat(journey.startTime(), is(entryTimeDate));
+        assertThat(journey.endTime(), is(exitTimeDate));
+    }
+    @Test
+    public void emptyJourney2GivesCorrectDetails(){
+        Journey journey = new Journey();
+        journey.createStartEvent(cardId, startStationReaderId);
+        journey.createEndEvent(cardId, endStationReaderId);
+        assertThat(journey.originId(), is(startStationReaderId));
+        assertThat(journey.destinationId(), is(endStationReaderId));
+    }
+    @Test
     public void checkTimeCalculations(){
-        //int differenceInSeconds = (int)(exitTime - entryTime) / 60 / 1000;
-        //String differenceInMinutes = "" + differenceInSeconds / 60 + ":" + differenceInSeconds % 60;
+        JourneyEvent start = new JourneyStart(cardId, startStationReaderId, entryTime);
+        JourneyEvent end = new JourneyEnd(cardId, endStationReaderId, exitTime);
+        Journey journey = new Journey(start, end);
         assertThat(journey.startTime(), is(entryTimeDate));
         assertThat(journey.endTime(), is(exitTimeDate));
         assertThat(journey.durationMinutes(), is("30:0"));
@@ -45,6 +64,9 @@ public class JourneyTest {
 
     @Test
     public void checkTimeFormatting(){
+        JourneyEvent start = new JourneyStart(cardId, startStationReaderId, entryTime);
+        JourneyEvent end = new JourneyEnd(cardId, endStationReaderId, exitTime);
+        Journey journey = new Journey(start, end);
         assertThat(journey.formattedStartTime(), is(SimpleDateFormat.getInstance().format(entryTime)));
         assertThat(journey.formattedEndTime(), is(SimpleDateFormat.getInstance().format(exitTime)));
     }
