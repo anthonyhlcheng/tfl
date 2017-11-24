@@ -5,7 +5,6 @@ import com.tfl.external.Customer;
 import com.tfl.external.CustomerDatabase;
 import com.tfl.external.PaymentsSystem;
 
-import java.math.BigDecimal;
 import java.util.*;
 
 public class TravelTracker implements ScanListener {
@@ -13,17 +12,16 @@ public class TravelTracker implements ScanListener {
     private final Hashtable<UUID, CustomerTracker> customerTrackerHashTable= new Hashtable<>();
     private CustomerDatabase databases = CustomerDatabase.getInstance();
     private PaymentsSystem payments = PaymentsSystem.getInstance();
-    private PaymentCalculator calculator = PaymentCalculator.getInstance();
 
     public void chargeAccounts() {
         List<Customer> customers = databases.getCustomers();
         for (Customer customer : customers) {
             if(customerTrackerHashTable.containsKey(customer.cardId())){
                 CustomerTracker tracker = customerTrackerHashTable.get(customer.cardId());
-                List<Journey> journeys = tracker.getJourneys();
-                if(!journeys.isEmpty()){
+                if(!tracker.getJourneys().isEmpty()){
+                    PaymentCalculator calculator = new PaymentCalculator(tracker.getFares());
                     calculator.didCustomerRideDuringPeakHours(tracker.checkForPeakJourney());
-                    payments.charge(customer, journeys, calculator.calculate(tracker.getFares()));
+                    payments.charge(customer, tracker.getJourneys(), calculator.calculate());
                 }
             }
         }

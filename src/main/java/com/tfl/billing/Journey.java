@@ -16,6 +16,7 @@ public class Journey {
     }
 
     public void createStartEvent(UUID cardId, UUID readerId){
+
         start = new JourneyStart(cardId, readerId);
     }
     public void createStartEvent(UUID cardId, UUID readerId, long time){

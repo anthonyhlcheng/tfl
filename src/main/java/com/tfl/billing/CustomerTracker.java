@@ -1,21 +1,16 @@
 package com.tfl.billing;
 
-import com.oyster.OysterCard;
-import com.tfl.external.Customer;
-import sun.security.krb5.internal.Ticket;
-
 import java.math.BigDecimal;
 import java.util.*;
 
-public class CustomerTracker{
-    private UUID cardId;
+class CustomerTracker{
     private Journey currentJourney;
     private List<Journey> customerJourney = new ArrayList<>();
     private List<TicketType> tickets = new ArrayList<>();
     private List<BigDecimal> fares = new ArrayList<>();
     private boolean currentlyTravelling = false;
-    public CustomerTracker(){
-    }
+
+    CustomerTracker(){}
     private boolean peak(Journey journey) {
         return peak(journey.startTime()) || peak(journey.endTime());
     }
@@ -27,15 +22,16 @@ public class CustomerTracker{
     }
     private void findTicketType(Journey journey){
         int journeyDuration = journey.durationSeconds();
+        TicketType ticket;
         if(peak(journey)){
-            tickets.add(new Peak(journeyDuration));
-            fares.add(tickets.get(tickets.size()-1).price());
+            ticket = new Peak(journeyDuration);
         }else{
-            tickets.add(new OffPeak(journeyDuration));
-            fares.add(tickets.get(tickets.size()-1).price());
+            ticket = new OffPeak(journeyDuration);
         }
+        tickets.add(ticket);
+        fares.add(ticket.price());
     }
-    public void addEvent(UUID cardId, UUID readerId){
+    void addEvent(UUID cardId, UUID readerId){
         if(!currentlyTravelling){
             //Create a new event since start of new journey
             currentJourney = new Journey();
@@ -49,7 +45,7 @@ public class CustomerTracker{
             currentlyTravelling = false;
         }
     }
-    public void addEvent(UUID cardId, UUID readerId, long time){
+    void addEvent(UUID cardId, UUID readerId, long time){
         if(!currentlyTravelling){
             //Create a new event since start of new journey
             currentJourney = new Journey();
@@ -63,7 +59,7 @@ public class CustomerTracker{
             currentlyTravelling = false;
         }
     }
-    public boolean checkForPeakJourney(){
+    boolean checkForPeakJourney(){
         for(TicketType ticket:tickets){
             if(ticket instanceof Peak){
                 return true;
@@ -71,11 +67,11 @@ public class CustomerTracker{
         }
         return false;
     }
-    public List<Journey> getJourneys(){
+    List<Journey> getJourneys(){
         return customerJourney;
     }
 
-    public List<BigDecimal> getFares(){
+    List<BigDecimal> getFares(){
         return fares;
     }
 
