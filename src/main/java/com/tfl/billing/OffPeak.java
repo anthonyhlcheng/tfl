@@ -2,7 +2,7 @@ package com.tfl.billing;
 
 import java.math.BigDecimal;
 
-public class OffPeak extends TicketType {
+public class OffPeak implements TicketType {
     private static final BigDecimal OFF_PEAK_SHORT_JOURNEY_PRICE = new BigDecimal(1.60);
     private static final BigDecimal OFF_PEAK_LONG_JOURNEY_PRICE = new BigDecimal(2.70);
     private static final int TIME_THRESHOLD = 25*60; //In seconds 25 mins
