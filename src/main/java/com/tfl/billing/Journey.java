@@ -16,19 +16,25 @@ public class Journey {
     }
 
     public void createStartEvent(UUID cardId, UUID readerId){
-
+        //Create a JourneyStart object
         start = new JourneyStart(cardId, readerId);
     }
+    //Testing purposes only
     public void createStartEvent(UUID cardId, UUID readerId, long time){
+        //Creates a JourneyStart object with the option of setting time
         start = new JourneyStart(cardId, readerId, time);
     }
     public void createEndEvent(UUID cardId, UUID readerId){
+        //Create a JourneyEnd object
         end = new JourneyEnd(cardId, readerId);
     }
+    //Testing purposes only
     public void createEndEvent(UUID cardId, UUID readerId, long time){
+        //Creates a JourneyEnd object with the option of setting time
         end = new JourneyEnd(cardId, readerId, time);
     }
 
+    //Getting all information that can be retrieved from stored JourneyEvents
     public UUID originId() {
         return start.readerId();
     }
