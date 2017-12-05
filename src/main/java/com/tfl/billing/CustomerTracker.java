@@ -12,6 +12,12 @@ class CustomerTracker{
 
     CustomerTracker(){}
 
+    //Testing Purposes only
+    CustomerTracker(List<Journey> journeys, List<TicketType> tickets, List<BigDecimal> fares){
+        this.customerJourney = journeys;
+        this.tickets = tickets;
+        this.fares = fares;
+    }
     //Check if a journey is made during peak times using a Journey object or time
     private boolean peak(Journey journey) {
         return peak(journey.startTime()) || peak(journey.endTime());
